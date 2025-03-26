@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Assistance Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="college-header">
+        <img src="{{ url_for('static', filename='college logo.png') }}" alt="College Logo" class="college-logo">
+        <h1>Vidhya Sagar Women's College</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="college-content">
+        <section class="about-section">
+            <h2>About Us</h2>
+            <p>Empowering women through quality education, fostering excellence, and nurturing future leaders.</p>
+        </section>
+        <br><br>
+        <section class="mission-vision">
+            <h2>Our Mission</h2>
+            <p>Providing holistic education that integrates knowledge, ethics, and innovation.</p>
+            <br><br>
+            <h2>Our Vision</h2>
+            <p>Transforming students into responsible citizens and professionals.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="college-footer">
+        📍 123, ABC Road, Chennai, Tamil Nadu, India | 📞 +91 98765 43210 | ✉ info@vidhyasagar.edu
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chat-container">
+        <div class="chat-header">
+            <h3>College Chatbot</h3>
+            <div class="chat-icons">
+                <button id="clear-chat" title="Clear Chat">🗑️</button>
+                <button id="close-chat" title="Close">&times;</button>
+            </div>
+        </div>
+        <div class="chat-box" id="chat-box">
+            <div class="bot-message">
+                Hello! How can I assist you with Vidhya Sagar Women's College?  
+                <span class="copy-icon" onclick="copyText(this)">📋</span>
+            </div>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" id="user-input" placeholder="Ask about admissions, courses, etc.">
+            <button id="copy-btn" title="Copy Response">📋</button>  
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+    <!-- Chatbot Icon -->
+    <div class="chat-icon" id="chat-icon">
+        <img src="{{ url_for('static', filename='chatbot-icon.png') }}" alt="Chatbot Icon">
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
